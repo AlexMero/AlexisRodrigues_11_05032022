@@ -22,11 +22,16 @@ const StyledTitle = styled.h1`
   margin: 20px;
 `
 
+function handleOnClick(id) {
+  window.location.href = '/logement/' + id
+}
+
 function Card(props) {
-  const title = props.title
+  const logement = props.data
+
   return (
-    <StyledCard>
-      <StyledTitle>{title}</StyledTitle>
+    <StyledCard onClick={() => handleOnClick(logement.id)}>
+      <StyledTitle>{logement.title}</StyledTitle>
     </StyledCard>
   )
 }

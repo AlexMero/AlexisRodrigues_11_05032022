@@ -5,6 +5,7 @@ import colors from '../../style/color'
 import Card from '../../components/Card'
 import bckGround from '../../assets/bckgrndBandeau.png'
 import logements from '../../datas/logements'
+import Footer from '../../components/Footer'
 
 const StyledCardsContainer = styled.section`
   background-color: ${colors.backgroundLight};
@@ -28,9 +29,10 @@ function Home() {
       />
       <StyledCardsContainer>
         {logements.map((logement) => {
-          return <Card key={logement.id} title={logement.title} />
+          return <Card key={logement.id} data={logement} />
         })}
       </StyledCardsContainer>
+      <Footer />
     </div>
   )
 }
