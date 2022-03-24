@@ -1,0 +1,37 @@
+.logementContainer {
+  .logementcontent {
+    display: grid;
+    grid-template-areas: 'titre profil' 'location profil' 'tags rating';
+    grid-template-columns: 80% 20%;
+    margin-top: 1rem;
+
+    h1 {
+      grid-area: titre;
+      color: $colorPrimary;
+      font-size: 36px;
+    }
+
+    span {
+      grid-area: location;
+      color: $colorPrimary;
+      font-size: 18px;
+    }
+
+    .logementTagContainer {
+      grid-area: tags;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      margin-top: 2rem;
+    }
+
+    .ratingContainer {
+      grid-area: rating;
+    }
+  }
+
+  .logementDropdownContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+}

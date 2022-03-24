@@ -1,0 +1,35 @@
+.dropdownContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+
+  .dropdownContent {
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+    background-color: $colorPrimary;
+    width: 100%;
+    height: 4rem;
+    color: white;
+  }
+
+  .h2 {
+    font-size: 24px;
+  }
+
+  .dropdownText {
+    width: 100%;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 20px 10px 20px 10px;
+    background-color: $colorBackgroundLight;
+    font-size: 24px;
+    color: $colorPrimary;
+  }
+}

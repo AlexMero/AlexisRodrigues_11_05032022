@@ -1,9 +1,8 @@
-import Bandeau from '../../components/Bandeau'
-import Header from '../../components/Header'
+import Bandeau from '../../components/Bandeau/Bandeau.jsx'
+import Header from '../../components/Header/Header.jsx'
 import bckgrndBandeauApropos from '../../assets/bckgrndBandeauApropos.png'
-import Footer from '../../components/Footer'
-import Dropdown from '../../components/Dropdown'
-import styled from 'styled-components'
+import Footer from '../../components/Footer/Footer.jsx'
+import Dropdown from '../../components/Dropdown/Dropdown.jsx'
 
 const dropdownsContent = [
   {
@@ -28,31 +27,22 @@ const dropdownsContent = [
   },
 ]
 
-const StyledDropdownContainer = styled.div`
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: space-between;
-  //   flex-flow: column;
-  height: auto;
-`
-
 function Apropos() {
   return (
     <div>
       <Header />
       <Bandeau picture={bckgrndBandeauApropos} key="2" />
-      <StyledDropdownContainer>
+      <div className="aproposContainer">
         {dropdownsContent.map((dropdownContent) => {
           return (
             <Dropdown
               key={dropdownContent.title}
               title={dropdownContent.title}
               content={dropdownContent.content}
-              size="80"
             />
           )
         })}
-      </StyledDropdownContainer>
+      </div>
       <Footer />
     </div>
   )

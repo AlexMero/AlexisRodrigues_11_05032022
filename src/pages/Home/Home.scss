@@ -1,0 +1,10 @@
+.sectionLogementContainer {
+  background-color: $colorBackgroundLight;
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}

@@ -1,0 +1,16 @@
+.cardContainer {
+  width: 340px;
+  height: 340px;
+  background: $colorPrimary;
+  background: linear-gradient(180deg, $colorPrimary 20%, rgba(0, 0, 0, 1) 150%);
+  border-radius: 10px;
+  margin: 50px;
+  display: flex;
+  align-items: flex-end;
+
+  h1 {
+    font-size: 18px;
+    color: white;
+    margin: 20px;
+  }
+}

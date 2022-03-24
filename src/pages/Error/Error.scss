@@ -1,0 +1,23 @@
+.errorPage {
+  .mainContent {
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+
+    h1 {
+      color: $colorPrimary;
+      font-size: 8rem;
+      font-weight: 700;
+    }
+
+    p {
+      color: $colorPrimary;
+      font-size: 2rem;
+    }
+
+    .styledLink {
+      color: $colorPrimary;
+      margin-top: 5rem;
+    }
+  }
+}

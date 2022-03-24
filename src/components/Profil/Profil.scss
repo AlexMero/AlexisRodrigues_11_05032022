@@ -1,0 +1,28 @@
+.profilContainer {
+  grid-area: profil;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-end;
+
+  span {
+    color: $colorPrimary;
+    font-size: 18px;
+    line-height: 25px;
+    width: min-intrinsic;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    display: table-caption;
+    display: -ms-grid;
+    -ms-grid-columns: min-content;
+    text-align: right;
+    margin-right: 10px;
+  }
+
+  img {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>main {
+    background: red;
+    grid-area: main;
+}
+
+footer {
+    background: grey;
+    grid-area: footer;
+    padding: 0 calc(calc(100vw - var(--wrapper)) /2 );
+}
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template-areas:
+        ". main ."
+        "footer footer footer";
+    grid-template-columns: auto var(--wrapper) auto;
+    min-height: 100vh;
+    grid-template-rows: auto 5rem;
+}
+
+:root{
+    --wrapper : 100vw;
+}
+
+@media screen AND (min-width:768px){
+    
+:root{
+    --wrapper :700px;
+}
+}
+    </style>
+</head>
+<body>
+    <main>dfgdfg</main>
+    <footer>fgdfgdfg</footer>
+</body>
+</html>
