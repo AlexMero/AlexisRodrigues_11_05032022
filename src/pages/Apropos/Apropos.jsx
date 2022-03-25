@@ -29,7 +29,7 @@ const dropdownsContent = [
 
 function Apropos() {
   return (
-    <div>
+    <div className="aproposContainer">
       <main>
         <Header />
         <Bandeau picture={bckgrndBandeauApropos} key="2" />

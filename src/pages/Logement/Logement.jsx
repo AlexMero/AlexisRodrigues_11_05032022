@@ -24,7 +24,7 @@ function Logement() {
         <Carroussel photos={logement.pictures} />
         <div className="logementContent">
           <h1>{logement.title}</h1>
-          <span>{logement.location}</span>
+          <span className="location">{logement.location}</span>
           <div className="logementTagContainer">
             {logement.tags.map((tag) => {
               return <Tag texte={tag} key={tag} />
@@ -32,19 +32,22 @@ function Logement() {
           </div>
           <Profil profilData={logement.host} />
           <Rating note={logement.rating} />
+          <div className="description">
+            <Dropdown
+              title="Description"
+              content={logement.description}
+              key="description"
+            />
+          </div>
+          <div className="equipements">
+            <Dropdown
+              title="Equipements"
+              content={logement.equipments}
+              key="equipement"
+            />
+          </div>
         </div>
-        <div className="logementDropdownContainer">
-          <Dropdown
-            title="Description"
-            content={logement.description}
-            key="description"
-          />
-          <Dropdown
-            title="Equipements"
-            content={logement.equipments}
-            key="equipement"
-          />
-        </div>
+        <div className="logementDropdownContainer"></div>
       </main>
       <Footer />
     </div>

@@ -15,7 +15,7 @@ function Home() {
           picture={bckGround}
           key="1"
         />
-        <section className="sectionLogementContainer">
+        <section className="homeLogementContainer">
           {logements.map((logement) => {
             return <Card key={logement.id} data={logement} />
           })}

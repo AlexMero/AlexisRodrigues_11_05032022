@@ -8,24 +8,35 @@ function Carrousel({ photos }) {
   return (
     <section className="carrouselContainer">
       <img src={photos[photoIndex]} alt="fond d'écran de bandeau" />
-      <FontAwesomeIcon
-        className="angleLeft"
-        icon={faAngleLeft}
-        onClick={() => {
-          photos[photoIndex - 1]
-            ? setPhotoIndex(photoIndex - 1)
-            : setPhotoIndex(photos.length - 1)
-        }}
-      />
-      <FontAwesomeIcon
-        className="angleRight"
-        icon={faAngleRight}
-        onClick={() => {
-          photos[photoIndex + 1]
-            ? setPhotoIndex(photoIndex + 1)
-            : setPhotoIndex(0)
-        }}
-      />
+      {photos.length !== 1 ? (
+        <FontAwesomeIcon
+          className="angleLeft"
+          icon={faAngleLeft}
+          onClick={() => {
+            photos[photoIndex - 1]
+              ? setPhotoIndex(photoIndex - 1)
+              : setPhotoIndex(photos.length - 1)
+          }}
+        />
+      ) : (
+        ''
+      )}
+      {photos.length !== 1 ? (
+        <FontAwesomeIcon
+          className="angleRight"
+          icon={faAngleRight}
+          onClick={() => {
+            photos[photoIndex + 1]
+              ? setPhotoIndex(photoIndex + 1)
+              : setPhotoIndex(0)
+          }}
+        />
+      ) : (
+        ''
+      )}
+      <p>
+        {photoIndex + 1}/{photos.length}
+      </p>
     </section>
   )
 }

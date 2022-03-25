@@ -1,4 +1,4 @@
-.sectionLogementContainer {
+.homeLogementContainer {
   background-color: $colorBackgroundLight;
   width: 100%;
   height: auto;
@@ -6,5 +6,5 @@
   margin-top: 2rem;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: space-around;
 }

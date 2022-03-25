@@ -7,6 +7,7 @@ function Card(props) {
 
   return (
     <div className="cardContainer" onClick={() => handleOnClick(logement.id)}>
+      <img src={logement.cover} alt="" />
       <h1>{logement.title}</h1>
     </div>
   )

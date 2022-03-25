@@ -1,37 +1,44 @@
 .logementContainer {
-  .logementcontent {
-    display: grid;
-    grid-template-areas: 'titre profil' 'location profil' 'tags rating';
-    grid-template-columns: 80% 20%;
-    margin-top: 1rem;
+  main {
+    margin-bottom: 1rem;
+  }
+}
+.logementContent {
+  display: grid;
+  grid-template-areas: 'titre profil' 'location profil' 'tags rating' 'description equipements';
+  grid-template-columns: 50% 50%;
+  margin-top: 1rem;
 
-    h1 {
-      grid-area: titre;
-      color: $colorPrimary;
-      font-size: 36px;
-    }
-
-    span {
-      grid-area: location;
-      color: $colorPrimary;
-      font-size: 18px;
-    }
-
-    .logementTagContainer {
-      grid-area: tags;
-      display: flex;
-      align-items: center;
-      justify-content: start;
-      margin-top: 2rem;
-    }
-
-    .ratingContainer {
-      grid-area: rating;
-    }
+  h1 {
+    grid-area: titre;
+    color: $colorPrimary;
+    font-size: 36px;
   }
 
-  .logementDropdownContainer {
+  span.location {
+    grid-area: location;
+    color: $colorPrimary;
+    font-size: 18px;
+  }
+
+  .logementTagContainer {
+    grid-area: tags;
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
+    margin-top: 1rem;
+  }
+
+  .ratingContainer {
+    grid-area: rating;
+  }
+
+  .description {
+    grid-area: description;
+    margin: 0 20px 0 10px;
+  }
+
+  .equipements {
+    grid-area: equipements;
+    margin: 0 10px 0 20px;
   }
 }
