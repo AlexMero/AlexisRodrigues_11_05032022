@@ -30,19 +30,21 @@ const dropdownsContent = [
 function Apropos() {
   return (
     <div>
-      <Header />
-      <Bandeau picture={bckgrndBandeauApropos} key="2" />
-      <div className="aproposContainer">
-        {dropdownsContent.map((dropdownContent) => {
-          return (
-            <Dropdown
-              key={dropdownContent.title}
-              title={dropdownContent.title}
-              content={dropdownContent.content}
-            />
-          )
-        })}
-      </div>
+      <main>
+        <Header />
+        <Bandeau picture={bckgrndBandeauApropos} key="2" />
+        <div className="aproposContainer">
+          {dropdownsContent.map((dropdownContent) => {
+            return (
+              <Dropdown
+                key={dropdownContent.title}
+                title={dropdownContent.title}
+                content={dropdownContent.content}
+              />
+            )
+          })}
+        </div>
+      </main>
       <Footer />
     </div>
   )

@@ -6,7 +6,7 @@ const sourcemaps = require('gulp-sourcemaps')
 
 function makeCss() {
   return gulp
-    .src(['./src/style/color.scss', './src/**/**/*.scss', './src/**/*.scss'])
+    .src(['./src/style/bases.scss', './src/**/**/*.scss', './src/**/*.scss'])
     .pipe(gulpConcat('style.css'))
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))

@@ -1,0 +1,40 @@
+$colorPrimary: #ff6060;
+$colorBackgroundLight: #f6f6f6;
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 20px 0 0 0;
+}
+
+#root > div {
+  margin: 0;
+  display: grid;
+  grid-template-areas:
+    '. main .'
+    'footer footer footer';
+  grid-template-columns: auto var(--wrapper) auto;
+  min-height: 100vh;
+  grid-template-rows: auto 5rem;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+  padding: 0 calc(calc(100vw - var(--wrapper)) / 2);
+}
+
+:root {
+  --wrapper: 90vw;
+}
+
+@media screen AND (max-width: 768px) {
+  :root {
+    --wrapper: 750px;
+  }
+}

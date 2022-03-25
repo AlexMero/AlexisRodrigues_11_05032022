@@ -19,31 +19,33 @@ function Logement() {
 
   return (
     <div className="logementContainer">
-      <Header />
-      <Carroussel photos={logement.pictures} />
-      <div className="logementContent">
-        <h1>{logement.title}</h1>
-        <span>{logement.location}</span>
-        <div className="logementTagContainer">
-          {logement.tags.map((tag) => {
-            return <Tag texte={tag} key={tag} />
-          })}
+      <main>
+        <Header />
+        <Carroussel photos={logement.pictures} />
+        <div className="logementContent">
+          <h1>{logement.title}</h1>
+          <span>{logement.location}</span>
+          <div className="logementTagContainer">
+            {logement.tags.map((tag) => {
+              return <Tag texte={tag} key={tag} />
+            })}
+          </div>
+          <Profil profilData={logement.host} />
+          <Rating note={logement.rating} />
         </div>
-        <Profil profilData={logement.host} />
-        <Rating note={logement.rating} />
-      </div>
-      <div className="logementDropdownContainer">
-        <Dropdown
-          title="Description"
-          content={logement.description}
-          key="description"
-        />
-        <Dropdown
-          title="Equipements"
-          content={logement.equipments}
-          key="equipement"
-        />
-      </div>
+        <div className="logementDropdownContainer">
+          <Dropdown
+            title="Description"
+            content={logement.description}
+            key="description"
+          />
+          <Dropdown
+            title="Equipements"
+            content={logement.equipments}
+            key="equipement"
+          />
+        </div>
+      </main>
       <Footer />
     </div>
   )
