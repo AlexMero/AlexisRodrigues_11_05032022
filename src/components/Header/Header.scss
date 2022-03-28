@@ -22,3 +22,15 @@
     text-decoration: underline;
   }
 }
+
+@media screen AND (max-width: 768px) {
+  .headerContainer {
+    .headerLink {
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    img {
+      height: 47px;
+    }
+  }
+}

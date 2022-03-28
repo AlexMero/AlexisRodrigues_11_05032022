@@ -19,7 +19,7 @@
     color: white;
   }
 
-  .h2 {
+  h2 {
     font-size: 24px;
   }
 
@@ -31,5 +31,22 @@
     background-color: $colorBackgroundLight;
     font-size: 24px;
     color: $colorPrimary;
+  }
+}
+
+@media screen AND (max-width: 768px) {
+  .dropdownContainer {
+    .dropdownContent {
+      height: 35px;
+
+      h2 {
+        font-size: 13px;
+        font-weight: 100;
+      }
+    }
+
+    .dropdownText {
+      font-size: 12px;
+    }
   }
 }

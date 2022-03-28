@@ -16,3 +16,13 @@
     margin-left: 5px;
   }
 }
+
+@media screen AND (max-width: 768px) {
+  .ratingContainer {
+    justify-content: flex-start;
+    .colorStar,
+    .greyStar {
+      font-size: 1rem;
+    }
+  }
+}

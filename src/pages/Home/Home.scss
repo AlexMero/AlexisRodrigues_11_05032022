@@ -8,3 +8,9 @@
   flex-flow: row wrap;
   justify-content: space-around;
 }
+
+@media screen AND (max-width: 768px) {
+  .homeLogementContainer {
+    background-color: unset;
+  }
+}

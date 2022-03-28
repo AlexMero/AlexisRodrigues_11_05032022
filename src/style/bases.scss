@@ -20,6 +20,12 @@ body {
   grid-template-rows: auto 10rem;
 }
 
+@media screen AND (max-width: 768px) {
+  #root > div {
+    grid-template-rows: auto 8rem;
+  }
+}
+
 main {
   grid-area: main;
 }
@@ -31,10 +37,4 @@ footer {
 
 :root {
   --wrapper: 90vw;
-}
-
-@media screen AND (max-width: 768px) {
-  :root {
-    --wrapper: 750px;
-  }
 }

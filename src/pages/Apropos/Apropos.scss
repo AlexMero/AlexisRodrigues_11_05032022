@@ -3,3 +3,9 @@
     margin-bottom: 1rem;
   }
 }
+
+@media screen AND (max-width: 768px) {
+  .aproposContainer main .bandeauContainer {
+    height: 15rem;
+  }
+}

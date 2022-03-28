@@ -15,6 +15,7 @@
     font-size: 48px;
     position: relative;
     z-index: 2;
+    font-weight: 100;
   }
 
   img {
@@ -25,5 +26,17 @@
     height: 100%;
     opacity: 0.6;
     object-fit: cover;
+  }
+}
+
+@media screen AND (max-width: 768px) {
+  .bandeauContainer {
+    height: 8rem;
+    border-radius: 15px;
+
+    h1 {
+      font-size: 2rem;
+      padding-left: 1rem;
+    }
   }
 }

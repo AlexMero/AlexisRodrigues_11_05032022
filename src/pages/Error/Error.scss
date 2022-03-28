@@ -21,3 +21,19 @@
     }
   }
 }
+
+@media screen AND (max-width: 768px) {
+  .errorPage {
+    .mainContent {
+      h1 {
+        text-align: center;
+        margin-bottom: 0;
+      }
+
+      p {
+        text-align: center;
+        font-size: 18px;
+      }
+    }
+  }
+}

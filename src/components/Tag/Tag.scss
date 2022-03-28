@@ -8,3 +8,15 @@
   padding: 7px;
   border-radius: 10px;
 }
+
+@media screen AND (max-width: 768px) {
+  .tagContainer {
+    width: 84px;
+    min-width: unset;
+    height: 18px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

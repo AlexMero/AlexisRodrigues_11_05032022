@@ -7,7 +7,6 @@
   border-radius: 25px;
   margin-top: 2rem;
   position: relative;
-  background: #000000;
   overflow: hidden;
 
   img {
@@ -42,5 +41,20 @@
     font-size: 1.2rem;
     position: absolute;
     bottom: 1rem;
+  }
+}
+
+@media screen AND (max-width: 768px) {
+  .carrouselContainer {
+    height: 255px;
+
+    .angleLeft,
+    .angleRight {
+      font-size: 2rem;
+    }
+
+    p {
+      z-index: -1;
+    }
   }
 }

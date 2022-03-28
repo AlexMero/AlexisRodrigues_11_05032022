@@ -3,6 +3,7 @@
     margin-bottom: 1rem;
   }
 }
+
 .logementContent {
   display: grid;
   grid-template-areas: 'titre profil' 'location profil' 'tags rating' 'description equipements';
@@ -40,5 +41,28 @@
   .equipements {
     grid-area: equipements;
     margin: 0 10px 0 20px;
+  }
+}
+
+@media screen AND (max-width: 768px) {
+  .logementContent {
+    grid-template-areas: 'titre titre' 'location location' 'tags tags' 'rating profil' 'description description' 'equipements equipements';
+
+    h1 {
+      font-weight: 100;
+      font-size: 18px;
+    }
+
+    span.location {
+      font-size: 14px;
+    }
+
+    .description {
+      margin: 0;
+    }
+
+    .equipements {
+      margin: 0;
+    }
   }
 }

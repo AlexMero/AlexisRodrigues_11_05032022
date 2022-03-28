@@ -7,3 +7,9 @@
   color: white;
   height: 100%;
 }
+
+@media screen AND (max-width: 768px) {
+  .footerContainer {
+    font-size: 12px;
+  }
+}
