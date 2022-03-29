@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { createElement, useState } from 'react'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -17,7 +17,25 @@ function Dropdown({ title, content }) {
         <h2>{title}</h2>
         <FontAwesomeIcon icon={isOpen ? faAngleUp : faAngleDown} />
       </div>
-      {isOpen ? <div className="dropdownText">{content}</div> : ''}
+      {isOpen
+        ? typeof content === 'string'
+          ? templateText(content)
+          : templateArray(content)
+        : ''}
+    </div>
+  )
+}
+
+function templateText(content) {
+  return <div className="dropdownText">{content}</div>
+}
+
+function templateArray(content) {
+  return (
+    <div className="dropdownText">
+      {content.map((text) => {
+        return <p>{text}</p>
+      })}
     </div>
   )
 }
