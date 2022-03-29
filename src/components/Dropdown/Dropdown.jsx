@@ -1,4 +1,4 @@
-import { createElement, useState } from 'react'
+import { useState } from 'react'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -15,7 +15,10 @@ function Dropdown({ title, content }) {
         }}
       >
         <h2>{title}</h2>
-        <FontAwesomeIcon icon={isOpen ? faAngleUp : faAngleDown} />
+        <FontAwesomeIcon
+          icon={isOpen ? faAngleUp : faAngleDown}
+          // key={isOpen ? title : title + 'close'}
+        />
       </div>
       {isOpen
         ? typeof content === 'string'

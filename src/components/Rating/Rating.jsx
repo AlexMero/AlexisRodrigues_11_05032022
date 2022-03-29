@@ -6,8 +6,12 @@ function Rating({ note }) {
   const items = []
   for (let i = 0; i < 5; i++) {
     i <= parseInt(note) - 1
-      ? items.push(<FontAwesomeIcon className="colorStar" icon={faStar} />)
-      : items.push(<FontAwesomeIcon className="greyStar" icon={faStar} />)
+      ? items.push(
+          <FontAwesomeIcon className="colorStar" icon={faStar} key={i} />
+        )
+      : items.push(
+          <FontAwesomeIcon className="greyStar" icon={faStar} key={i} />
+        )
   }
   return <div className="ratingContainer">{items}</div>
 }

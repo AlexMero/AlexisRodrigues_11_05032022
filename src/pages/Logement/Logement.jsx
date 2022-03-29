@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 import logements from '../../datas/logements'
 import Header from '../../components/Header/Header.jsx'
 import Tag from '../../components/Tag/Tag.jsx'
@@ -10,12 +10,10 @@ import Carroussel from '../../components/Carrousel/Carrousel.jsx'
 
 function Logement() {
   const { id } = useParams()
-  let logement = {}
-  logements.forEach((data) => {
-    if (data.id === id) {
-      logement = data
-    }
-  })
+  const logement = extractLogement(id)
+  if (logement === null) {
+    return <Navigate replace to="/404" />
+  }
 
   return (
     <div className="logementContainer">
@@ -52,6 +50,13 @@ function Logement() {
       <Footer />
     </div>
   )
+}
+
+function extractLogement(id) {
+  for (const logement of logements) {
+    if (logement.id === id) return logement
+  }
+  return null
 }
 
 export default Logement
